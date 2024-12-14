@@ -1,5 +1,48 @@
 # Dragon
+* https://python3.info/dragon/polish/about.html
 
-## Opis
+## Setup
 
-https://python3.info/dragon/polish/about.html
+```pycon
+>>> from random import seed; seed(0)
+>>> from main import Dragon
+
+```
+
+## Nazwa smoka
+
+* Smok przy tworzeniu ma nazwę
+* Smok przy tworzeniu podnosi błąd jeżeli nie ma nazwy
+
+Stwórz smoka o nazwie "Wawelski":
+
+```pycon
+>>> dragon = Dragon('Wawelski')
+
+```
+
+Stworzenie smoka bez nazwy podnosi błąd:
+
+```pycon
+>>> Dragon()
+Traceback (most recent call last):
+TypeError: Dragon.__init__() missing 1 required positional argument: 'name'
+
+>>> Dragon('')
+Traceback (most recent call last):
+TypeError: Name cannot be empty
+
+```
+
+## Punkty życia
+
+* Smok przy tworzeniu ma losowe punkty życia z zakresu 50 do 100
+
+
+Smok przy tworzeniu ma losowe punkty życia:
+
+```pycon
+>>> dragon.health
+74
+
+```
